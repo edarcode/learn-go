@@ -1,12 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"learn-go/utils"
+)
 
 func main() {
-	fmt.Println("edarcode", 26)
-	fmt.Printf("%s tiene %d años\n", "edarcode", 26)
-	fmt.Printf("%T\n%T\n", "edarcode", 26)
-	var msg string = fmt.Sprintf("%s tiene %d años\n", "edarcode", 26)
-	fmt.Println(msg)
-
+	addition, subtraction, multiplication, division := utils.GetBasicOperations(1, 0)
+	fmt.Println(addition)
+	fmt.Println(subtraction)
+	fmt.Println(multiplication)
+	fmt.Println(division)
 }

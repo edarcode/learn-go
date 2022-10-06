@@ -15,6 +15,7 @@ Imprime por consola un string, permite incrustar variables dentro del mismo indi
 - **%s** indica un string
 - **%d** indica un entero
 - **%v** indica cualquier tipo
+- **%t** indica bool
 - **\n** indica un salto de linea
 
 ```
