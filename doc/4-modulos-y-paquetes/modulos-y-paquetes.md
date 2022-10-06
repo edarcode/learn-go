@@ -8,4 +8,6 @@ Cree una carpeta, ej "utils", dentro crear archivos que tengan un nombre de paqu
 
 ![package](./assets/package.png)
 
-si desea consumir los recursos del paquete debe nombrar el mismo con mayus ej "AddNumbers". Todos los archivos dentro de utils comparten el mismo scope.
+Si desea consumir los recursos del paquete debe nombrar el mismo con mayus. Todos los archivos dentro de utils comparten el mismo scope.
+
+![función](./assets/func.png)
