@@ -2,13 +2,10 @@ package main
 
 import (
 	"fmt"
-	"learn-go/utils"
 )
 
 func main() {
-	addition, subtraction, multiplication, division := utils.GetBasicOperations(1, 0)
-	fmt.Println(addition)
-	fmt.Println(subtraction)
-	fmt.Println(multiplication)
-	fmt.Println(division)
+	for i := 1; i <= 5; i++ {
+		fmt.Println(i)
+	}
 }

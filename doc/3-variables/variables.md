@@ -1,4 +1,4 @@
-## variables
+# Variables
 
 Puente definir variables de varias formas, go incluso es inteligente e infiere lo obvio.
 

@@ -12,7 +12,7 @@
 - **uint32** (googlea xD)
 - **uint64** (googlea xD)
 
-### dependientes de la arquitectura de cada pc 32 o 64 bits
+### Dependientes de la arquitectura de cada pc 32 o 64 bits
 
 - **uint**
 - **int**
