@@ -1,10 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"learn-go/utils"
+)
 
 func main() {
-	var name string = "edarcode"
-	var age int = 26
-
-	fmt.Println(name, age)
+	const name = "edarcode"
+	fmt.Println(name)
+	utils.CalcSquareArea(5)
+	utils.AddNumbers(5, 5)
 }
