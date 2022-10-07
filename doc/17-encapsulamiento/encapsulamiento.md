@@ -1,13 +1,13 @@
 # Encapsulamiento
 
-Se sabe que para encapsular o privatizar basta con colocar todo en minuscula. Creemos una struct "users" y privaticemos todas sus variables igualmente.
+Se sabe que para encapsular o privatizar basta con colocar todo en minúscula. Creemos una struct "users" y privaticemos todas sus variables igualmente.
 
 ```
 package structs
 
 type users struct {
-	name string
-	age  int
+name string
+age int
 }
 ```
 
@@ -15,8 +15,8 @@ Cree una función que pueda inicializar una instancia de la struct "users". Note
 
 ```
 func CreateUser(name string, age int) users {
-	newUser := users{name: name, age: age}
-	return newUser
+newUser := users{name: name, age: age}
+return newUser
 }
 ```
 
@@ -26,13 +26,13 @@ Para consumir sería:
 package main
 
 import (
-	"fmt"
-	"learn-go/structs"
+"fmt"
+"learn-go/structs"
 )
 
 func main() {
-	edarcode := structs.CreateUser("edarcode", 26)
-	fmt.Println(edarcode) // {edarcode 26}
+edarcode := structs.CreateUser("edarcode", 26)
+fmt.Println(edarcode) // {edarcode 26}
 }
 ```
 
@@ -40,11 +40,11 @@ Si intenta acceder a alguna propiedad de la **struct** no podrá. Lo ideal es cr
 
 ```
 func (user *users) GetName() string {
-	return user.name
+return user.name
 }
 
 func (user users) GetAge() int {
-	return user.age
+return user.age
 }
 ```
 
@@ -56,13 +56,13 @@ Para consumir sería:
 package main
 
 import (
-	"fmt"
-	"learn-go/structs"
+"fmt"
+"learn-go/structs"
 )
 
 func main() {
-	edarcode := structs.CreateUser("edarcode", 26)
-	fmt.Println(edarcode.GetName()) // edarcode
-	fmt.Println(edarcode.GetAge())  //26
+edarcode := structs.CreateUser("edarcode", 26)
+fmt.Println(edarcode.GetName()) // edarcode
+fmt.Println(edarcode.GetAge()) //26
 }
 ```
