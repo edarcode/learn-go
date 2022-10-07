@@ -3,12 +3,10 @@ package main
 import "fmt"
 
 func main() {
-	var edarcode [4]int
-	edarcode[0] = 1
-	edarcode[1] = 2
-	edarcode[2] = 3
+	var students = []string{"edarcode", "lore", "marian"}
+	var teachers = []string{"jose", "pablo"}
 
-	fmt.Println(edarcode)
-	fmt.Println(len(edarcode))
-	fmt.Println(cap(edarcode))
+	persons := append(students, teachers...)
+
+	fmt.Println(persons)
 }
