@@ -1,3 +1,6 @@
+# Switch
+
+```
 package main
 
 import (
@@ -16,3 +19,4 @@ func main() {
 
 	}
 }
+```
