@@ -1,14 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"learn-go/structs"
+)
 
 func main() {
-	edarcode := person{name: "edarcode", age: 26}
+	edarcode := structs.Person{Name: "edarcode", Age: 26}
 
-	fmt.Println(edarcode.name, edarcode.age)
-}
-
-type person struct {
-	name string
-	age  int
+	fmt.Println(edarcode)
 }
