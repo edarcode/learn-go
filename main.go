@@ -2,10 +2,16 @@ package main
 
 import (
 	"fmt"
-	"learn-go/utils"
 )
 
 func main() {
-	isPalindrome := utils.IsPalindrome("ama")
-	fmt.Println(isPalindrome)
+	temperature := make(map[string]int)
+	temperature["earth"] = 15
+	temperature["mars"] = -65
+
+	for key, value := range temperature {
+		fmt.Println(key, value)
+	}
+	value, ok := temperature["xd"]
+	fmt.Println(value, ok)
 }

@@ -6,6 +6,12 @@ Slice es similar a un array, sin embargo podemos mutar su tamaño. Definamos un 
 var persons = []string{"edarcode", "lore", "marian"}
 ```
 
+o usando la función make
+
+```
+make([]string, "edarcode", "lore", "marian")
+```
+
 Podemos agregar nuevos elementos a un slice con la función append. Tener en cuenta que append crea un copia en base al primer parámetro enviado y agrega todo lo demás.
 
 ```
