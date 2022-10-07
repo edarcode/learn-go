@@ -1,11 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"learn-go/utils"
+)
 
 func main() {
-	var students [4]int
-
-	for _, student := range students {
-		fmt.Println(student)
-	}
+	isPalindrome := utils.IsPalindrome("ama")
+	fmt.Println(isPalindrome)
 }
