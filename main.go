@@ -1,17 +1,14 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
-	temperature := make(map[string]int)
-	temperature["earth"] = 15
-	temperature["mars"] = -65
+	edarcode := person{name: "edarcode", age: 26}
 
-	for key, value := range temperature {
-		fmt.Println(key, value)
-	}
-	value, ok := temperature["xd"]
-	fmt.Println(value, ok)
+	fmt.Println(edarcode.name, edarcode.age)
+}
+
+type person struct {
+	name string
+	age  int
 }
