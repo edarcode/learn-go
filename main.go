@@ -6,8 +6,7 @@ import (
 )
 
 func main() {
-	edarcode := structs.Person{Name: "edarcode", Age: 26}
-	fmt.Println(edarcode) // {edarcode 26}
-	edarcode.SetName("edar")
-	fmt.Println(edarcode) // {edarcode 26}
+	edarcode := structs.CreateUser("edarcode", 26)
+	fmt.Println(edarcode.GetName()) // edarcode
+	fmt.Println(edarcode.GetAge())  //26
 }
