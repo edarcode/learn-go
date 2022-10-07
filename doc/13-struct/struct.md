@@ -1,6 +1,6 @@
 # Struct
 
-Permiten escribir nuestros propios tipos de estructuras, como armar una plantilla y luego partir o instanciar muchas en base a la misma.
+Permiten escribir nuestros propios tipos de estructuras, tal cual armar una plantilla y luego partir o instanciar muchas en base a la misma.
 
 ```
 package main
