@@ -48,9 +48,11 @@ return user.age
 }
 ```
 
-Para consumir sería:
+Vista general:
 
 ![encapsulation](./assets/encapsulation.png)
+
+Conslusión:
 
 ```
 package main
@@ -61,8 +63,8 @@ import (
 )
 
 func main() {
-edarcode := structs.CreateUser("edarcode", 26)
-fmt.Println(edarcode.GetName()) // edarcode
-fmt.Println(edarcode.GetAge()) //26
+  edarcode := structs.CreateUser("edarcode", 26)
+  fmt.Println(edarcode.GetName()) // edarcode
+  fmt.Println(edarcode.GetAge()) //26
 }
 ```

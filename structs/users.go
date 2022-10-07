@@ -13,6 +13,6 @@ func CreateUser(name string, age int) users {
 func (user *users) GetName() string {
 	return user.name
 }
-func (user *users) GetAge() int {
+func (user users) GetAge() int {
 	return user.age
 }
