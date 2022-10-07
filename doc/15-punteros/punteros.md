@@ -1,6 +1,6 @@
 # Punteros
 
-Los punteros son variables que apuntan a otras variables y tienen poder sobre las mismas. Un puntero almacena la ref o dirección en memoría de la variable a la que esté apuntando.
+Los punteros son variables que apuntan a otras variables y tienen poder sobre las mismas. Un puntero almacena la ref o dirección en memoria de la variable a la que esté apuntando.
 
 ```
 package main
