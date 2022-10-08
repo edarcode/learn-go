@@ -10,9 +10,13 @@ func main() {
 	fmt.Println(edarcode.GetName()) // edarcode
 	fmt.Println(edarcode.GetAge())  // 26
 	fmt.Println(edarcode.GetRole()) // client
+	fmt.Println(edarcode.Greet())   // client
+
+	fmt.Println()
 
 	shakira := structs.CreateSinger("shakira isabel", 45, "shakira")
 	fmt.Println(shakira.GetName())     // shakira isabel
 	fmt.Println(shakira.GetAge())      // 45
 	fmt.Println(shakira.GetNickname()) // shakira
+	fmt.Println(shakira.Greet())       // shakira
 }

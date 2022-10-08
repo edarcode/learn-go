@@ -16,6 +16,6 @@ func (user users) GetRole() string {
 }
 
 func (user users) Greet() string {
-	msg := fmt.Sprintf("Hola soy %s", user.name)
+	msg := fmt.Sprintf("Hola soy %s me encanta comer pastas y carne", user.name)
 	return msg
 }
