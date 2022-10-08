@@ -1,18 +1,21 @@
 package structs
 
+import "fmt"
+
 type users struct {
-	name string
-	age  int
+	humans
+	role string
 }
 
-func CreateUser(name string, age int) users {
-	newUser := users{name: name, age: age}
-	return newUser
+func CreateUser(name string, age int, role string) users {
+	return users{humans: humans{name: name, age: age}, role: role}
 }
 
-func (user *users) GetName() string {
-	return user.name
+func (user users) GetRole() string {
+	return user.role
 }
-func (user users) GetAge() int {
-	return user.age
+
+func (user users) Greet() string {
+	msg := fmt.Sprintf("Hola soy %s", user.name)
+	return msg
 }
