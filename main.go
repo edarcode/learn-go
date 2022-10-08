@@ -2,19 +2,18 @@ package main
 
 import (
 	"fmt"
-	"sync"
+	"strings"
 )
 
 func main() {
-	var wg sync.WaitGroup
+	channel := make(chan string, 1)
 
-	fmt.Println("Hola")
+	fmt.Println("HOLA") // HOLA
+	go getUpperText("lore", channel)
+	fmt.Println(<-channel) // LORE
+}
 
-	wg.Add(1)
-	go func() {
-		defer wg.Done()
-		fmt.Println("edarcode")
-	}()
-
-	wg.Wait()
+func getUpperText(text string, channel chan<- string) {
+	upperText := strings.ToUpper(text)
+	channel <- upperText
 }
