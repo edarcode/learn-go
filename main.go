@@ -2,10 +2,19 @@ package main
 
 import (
 	"fmt"
+	"sync"
 )
 
 func main() {
-	things := []interface{}{"perro", 50, "gato", nil, 2.5}
-	fmt.Println(things)    // [perro 50 gato <nil> 2.5]
-	fmt.Println(things...) // perro 50 gato <nil> 2.5
+	var wg sync.WaitGroup
+
+	fmt.Println("Hola")
+
+	wg.Add(1)
+	go func() {
+		defer wg.Done()
+		fmt.Println("edarcode")
+	}()
+
+	wg.Wait()
 }
