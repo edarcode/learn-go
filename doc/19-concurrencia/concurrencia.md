@@ -1,21 +1,23 @@
 # ¿Qué es la concurrencia?
 
-**La concurrencia lidia con múltiples tareas al mismo tiempo, mientras que el paralelismo está haciendo múltiples tareas al mismo tiempo.**
+Es la capacidad del CPU para procesar más de un proceso al mismo tiempo.
 
-Cada que ejecutamos una tarea va a parar al procesador y el mismo va a realizarla en uno de sus hilos disponibles.
+Un procesador puede procesar al mismo tiempo el mismo número de procesos que el número de **nucleos** que tiene, de esta forma, si un procesador tiene un **nucleo**, entonces solo podrá ejecutar un proceso a la vez, por otro parte, si tenemos 8 nucleos, entonces podremos ejecutar hasta 8 procesos al mismo tiempo.
 
-Imaginemos que se necesitan realizar 2 tareas y la primera tarea debe repetirse 3 veces y hagamos un **vs**.
+los procesos en ejecución no tienen por qué estar relacionados, es decir, cualquiera puede iniciar y terminar en el momento que sea, y el resultado de uno no afecta al otro.
 
-## Paralelismo
+![concurrencia](./assets/concurrency.png)
 
-El procesador empieza por al primera tarea y crea 3 hilos, c/u agarra 1 ciclo, cada hilo espera termina su ciclo y una vez terminado lo anuncia y así mismo para cada hilo. Al terminar la primera tarea va a la siguiente.
+# Paralelismo
 
-En conclusión, el paralelismo hace muchas cosas al tiempo, pero no muchas tareas al tiempo, le toca esperar a que termine en la que esté para ir a la sgt.
+Sigue la filosofía de “divide y vencerás”, consiste en tomar un único problema, y mediante concurrencia llegar a una solución más rápido. Toma el problema inicial, lo divide en fracciones más pequeñas, y luego cada fracción es procesada de forma concurrente, aprovechando al máximo la capacidad del procesador para resolver el problema.
 
-## Concurrencia
+La principal diferencia paralelismo vs concurrencia es que, en el paralelismo, todos los procesos concurrentes están íntimamente relacionados a resolver el mismo problema, de tal forma que el resultado de los demás procesos afecta al resultado final.
 
-No se queda esperando a terminar la primera tarea, si no que avanza a la sgt sin mente y repite el proceso con cada tarea.
+Además, existe un paso final que se encarga de unir los resultados de todos los procesos para poder arrojar un resultado final.
 
-En conclusión, la concurrencia hace muchas cosas y muchas tareas al mismo tiempo 😎.
+![Paralelismo](./assets/parallelism.png)
 
-![concurrencia vs paralelismo](./assets/concurrency-vs-parallelism.png)
+## Conclusión
+
+**La concurrencia lidia con múltiples tareas al mismo tiempo, mientras que el paralelismo está haciendo múltiples tareas al mismo tiempo xD.**
