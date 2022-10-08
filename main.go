@@ -15,10 +15,4 @@ func main() {
 	fmt.Println(shakira.GetName())     // shakira isabel
 	fmt.Println(shakira.GetAge())      // 45
 	fmt.Println(shakira.GetNickname()) // shakira
-
-	edwin := structs.CreateUser("edwin ortiz", 21, "admin")
-	fmt.Println(edwin)
-
-	lore := structs.CreateSinger("lorena", 20, "lore")
-	fmt.Println(lore)
 }
