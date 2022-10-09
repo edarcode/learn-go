@@ -38,3 +38,21 @@ func main() {
 ```
 
 Tener en cuenta que es un poco menos ineficiente que los **wg**. Aunque deja muy limpio el code para gestionar las **goroutines**.
+
+Puede saber el tamaño y la capidad del channel con las func len y cap.
+
+```
+package main
+
+import "fmt"
+
+func main() {
+	channel := make(chan string, 3)
+
+	channel <- "Dato 1"
+	channel <- "Dato 2"
+
+	fmt.Println(len(channel)) // 2
+	fmt.Println(cap(channel)) // 3
+}
+```
