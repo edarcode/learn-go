@@ -7,7 +7,11 @@ func main() {
 
 	channel <- "Dato 1"
 	channel <- "Dato 2"
+	channel <- "Dato 3"
 
-	fmt.Println(len(channel)) // 2
-	fmt.Println(cap(channel)) // 3
+	close(channel)
+
+	for data := range channel {
+		fmt.Println(data)
+	}
 }
