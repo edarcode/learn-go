@@ -1,19 +1,13 @@
 package main
 
-import (
-	"fmt"
-	"strings"
-)
+import "fmt"
 
 func main() {
-	channel := make(chan string, 1)
+	channel := make(chan string, 2)
 
-	fmt.Println("HOLA") // HOLA
-	go getUpperText("lore", channel)
-	fmt.Println(<-channel) // LORE
-}
+	channel <- "Dato 1"
+	channel <- "Dato 2"
 
-func getUpperText(text string, channel chan<- string) {
-	upperText := strings.ToUpper(text)
-	channel <- upperText
+	fmt.Println("len:", len(channel))
+	fmt.Println("cap:", cap(channel))
 }

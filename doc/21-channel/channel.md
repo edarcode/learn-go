@@ -1,14 +1,18 @@
 # Channel
 
-Permite pasar información entre **goroutines**, además, No es necesario indicar que espere la **goroutine** explícitamente. De esta forma el code está mucho mas limpio y logramos algo similar a lo que hicimos con los **wait groups**. Tener en cuenta que es un poco menos ineficiente que los **wg**.
+Permite pasar información de una lado al otro, incluso entre **goroutines**, además, No es necesario indicar que las espere explícitamente.
 
 Creemos un channel
+
+- **chan:** Tipo de dato de una channel
+- **string:** Tipo de dato que pasará por el channel
+- **1:** Cantidad de datos a pasar por el channel
 
 ```
 channel := make(chan string, 1)
 ```
 
-Luego una función que posteriormente ejecutaremos concurrentemente. Note que al final se debe especificar que va a recibir un **channel** indicando el tipo del mismo y el tipo de información que enviaran por el **channel**.
+Creemos una **func** que posteriormente ejecutaremos concurrentemente. Se debe especificar que va a recibir un **channel** indicando el tipo del mismo y el tipo de información que enviaran por el **channel**.
 
 - **<-** Indica entrada del channel
 
@@ -33,26 +37,4 @@ func main() {
 }
 ```
 
-Vista general:
-
-```
-package main
-
-import (
-  "fmt"
-  "strings"
-)
-
-func main() {
-  channel := make(chan string, 1)
-
-  fmt.Println("HOLA") // HOLA
-  go getUpperText("lore", channel)
-  fmt.Println(<-channel) // LORE
-}
-
-func getUpperText(text string, channel chan<- string) {
-  upperText := strings.ToUpper(text)
-  channel <- upperText
-}
-```
+Tener en cuenta que es un poco menos ineficiente que los **wg**. Aunque deja muy limpio el code para gestionar las **goroutines**.
