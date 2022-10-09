@@ -3,15 +3,27 @@ package main
 import "fmt"
 
 func main() {
-	channel := make(chan string, 3)
+	users := make(chan []string, 1)
+	singers := make(chan []string, 1)
 
-	channel <- "Dato 1"
-	channel <- "Dato 2"
-	channel <- "Dato 3"
+	go getUsers(users)
+	go getSingers(singers)
 
-	close(channel)
-
-	for data := range channel {
-		fmt.Println(data)
+	channelCount := 2
+	for i := 0; i < channelCount; i++ {
+		select {
+		case users := <-users:
+			fmt.Println("usuarios:", users)
+		case singers := <-singers:
+			fmt.Println("cantantes:", singers)
+		}
 	}
+}
+
+func getUsers(users chan<- []string) {
+	users <- []string{"edarcode", "lore"}
+}
+
+func getSingers(singers chan<- []string) {
+	singers <- []string{"shakira", "bad bunny"}
 }
