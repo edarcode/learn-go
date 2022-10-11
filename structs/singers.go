@@ -8,7 +8,8 @@ type singers struct {
 }
 
 func CreateSinger(name string, age int, nickname string) singers {
-	return singers{humans: humans{name: name, age: age}, nickname: nickname}
+	propsHuman := humans{name, age}
+	return singers{humans: propsHuman, nickname: nickname}
 }
 
 func (singer singers) GetNickname() string {

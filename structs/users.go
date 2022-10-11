@@ -8,7 +8,8 @@ type users struct {
 }
 
 func CreateUser(name string, age int, role string) users {
-	return users{humans: humans{name: name, age: age}, role: role}
+	propsHuman := humans{name, age}
+	return users{humans: propsHuman, role: role}
 }
 
 func (user users) GetRole() string {
