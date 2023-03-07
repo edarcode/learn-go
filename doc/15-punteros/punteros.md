@@ -9,7 +9,7 @@ import "fmt"
 
 func main() {
 	name := "edarcode"
-	pointer := &edarcode
+	pointer := &name
 
 	fmt.Println(name) // edarcode
 	fmt.Println(pointer)  // 0xc000014250
